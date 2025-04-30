@@ -11,3 +11,12 @@ def diagonalSum(self, mat: List[List[int]]) -> int:
         i += 1
         j -= 1
     return res
+
+
+def diagonalSum_2(self, mat: List[List[int]]) -> int:
+    res = 0
+    for i in range(len(mat[0])):
+        for j in range(len(mat[0])):
+            if i == j or i == len(mat[0]) - j - 1:
+                res += mat[i][j]
+    return res
